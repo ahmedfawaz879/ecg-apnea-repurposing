@@ -1,0 +1,17 @@
+numpy
+pandas
+matplotlib
+scipy
+scikit-learn
+torch
+wfdb
+
+# Notes on non-obvious runtime dependencies (see notebook Sec. 1):
+# - torch: the notebook self-installs from the CUDA 12.1 wheel index
+#   (https://download.pytorch.org/whl/cu121) if missing. Install the build
+#   matching your platform/CUDA version manually if that default is wrong
+#   for your system (e.g. CPU-only or a different CUDA version).
+# - wfdb: required to read the PhysioNet WFDB record format (.hea/.dat
+#   signal files + .apn annotation files) used by
+#   src/data/apnea_ecg_loader.py, and for R-peak detection via
+#   wfdb.processing.xqrs_detect in src/features/hrv_features.py.
